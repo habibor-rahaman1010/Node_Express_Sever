@@ -58,6 +58,7 @@ const myMongoDB = async () => {
                 app.put('/blogs/details/update/:id', async (req, res, next) => {
                     const id = req.params.id;
                     const updateBlogs = req.body;
+                    console.log(updateBlogs)
                     const query = { _id: ObjectId(id) };
                     const options = { upsert: true };
                     const updateDoc = {
